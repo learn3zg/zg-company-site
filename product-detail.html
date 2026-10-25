@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - ZJ COMPANY</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .detail-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:60px;}
+        .img-big{width:100%;height:420px;object-fit:cover;border:1px solid #eee;}
+        .thumb-list{display:flex;gap:12px;margin-top:15px;}
+        .thumb{width:100px;height:70px;cursor:pointer;border:2px solid transparent;}
+        .thumb.active{border-color:#0f3057;}
+        .param-box{background:#f6f7f9;padding:30px;margin:40px 0;}
+        .param-table{width:100%;border-collapse:collapse;}
+        .param-table td{border:1px solid #ddd;padding:14px;}
+        .param-table tr:nth-child(odd){background:#fff;}
+        @media(max-width:768px){
+            .detail-wrap{grid-template-columns:1fr;}
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container nav-wrap">
+        <a href="index.html" class="logo">ZJ COMPANY</a>
+        <ul class="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="index.html#product" class="active">产品中心</a></li>
+            <li><a href="index.html#case">案例展示</a></li>
+            <li><a href="index.html#news">新闻资讯</a></li>
+            <li><a href="index.html#contact">联系我们</a></li>
+        </ul>
+        <div class="menu-btn">☰</div>
+    </div>
+</header>
+
+<section class="page-banner" style="background:linear-gradient(rgba(0,20,40,0.6),rgba(0,20,40,0.6)),url('images/about-banner.jpg') center/cover;">
+    <div class="container">
+        <h1>产品详情</h1>
+        <p>PRODUCT DETAIL</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="detail-wrap">
+            <div class="img-box">
+                <img src="images/pro1.jpg" class="img-big" id="bigImg">
+                <div class="thumb-list">
+                    <img src="images/pro1.jpg" class="thumb active" onclick="changeImg(this.src)">
+                    <img src="images/pro2.jpg" class="thumb" onclick="changeImg(this.src)">
+                    <img src="images/pro3.jpg" class="thumb" onclick="changeImg(this.src)">
+                </div>
+            </div>
+            <div class="info-box">
+                <h2>网络音频系统 Dante数字音频主机</h2>
+                <p style="margin:16px 0;color:#666;">型号：ZJ-AUDIO01</p>
+                <p>支持Dante网络音频协议，全网数字化传输，无模拟布线，稳定低延迟，广泛应用于会议室、报告厅、智慧教室项目。</p>
+                <ul style="margin:24px 0;line-height:2;">
+                    <li>✅ 千兆网口，支持全网音频传输</li>
+                    <li>✅ 一键组网，无需功放机柜</li>
+                    <li>✅ 支持远程管控、状态监测</li>
+                    <li>✅ 兼容全系列会议终端麦克风</li>
+                </ul>
+                <a href="index.html#contact" class="btn">立即咨询方案</a>
+            </div>
+        </div>
+
+        <div class="param-box">
+            <h3>技术参数</h3>
+            <table class="param-table">
+                <tr>
+                    <td>音频协议</td>
+                    <td>Dante 数字网络音频</td>
+                </tr>
+                <tr>
+                    <td>网络接口</td>
+                    <td>2路千兆RJ45网口</td>
+                </tr>
+                <tr>
+                    <td>音频延迟</td>
+                    <td>≤10ms</td>
+                </tr>
+                <tr>
+                    <td>供电方式</td>
+                    <td>DC24V / POE供电</td>
+                </tr>
+                <tr>
+                    <td>工作温度</td>
+                    <td>0℃~55℃</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>项目应用案例</h3>
+        <div class="grid-3" style="margin-top:30px;">
+            <div class="case-card">
+                <img src="images/case1.jpg" alt="案例">
+                <div class="case-info"><h4>政府会议室项目</h4></div>
+            </div>
+            <div class="case-card">
+                <img src="images/case2.jpg" alt="案例">
+                <div class="case-info"><h4>高校智慧教室</h4></div>
+            </div>
+            <div class="case-card">
+                <img src="images/case3.jpg" alt="案例">
+                <div class="case-info"><h4>企业多功能报告厅</h4></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h3>ZJ COMPANY</h3>
+                <p>专注音视频、网络音频、智能会议系统研发与销售</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="index.html#product">产品中心</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 www.zghjlo.com All Rights Reserved
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function changeImg(src){
+    document.getElementById('bigImg').src = src;
+    document.querySelectorAll('.thumb').forEach(item=>item.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

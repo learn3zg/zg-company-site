@@ -1,0 +1,9 @@
+# 系统垃圾
+.DS_Store
+Thumbs.db
+*.zip
+*.rar
+# 编辑器缓存
+.idea/
+.vscode/
+node_modules
